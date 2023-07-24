@@ -6,9 +6,10 @@ const dbConnect = async()=>{
             useUnifiedTopology: true,
             useNewUrlParser: true
         });
-        console.log(`Database connected ${conn.connection.host}`)
+        console.log(`Database connected ${conn.connection.host}`.blue.bold)
     }
     catch(error){
+        console.log((error).red)
     }
 }
 export default dbConnect;
